@@ -16,6 +16,12 @@ let appelX = 600; // x-positie van appel
 let appelY = 50;  // y-positie van appel
 let appleBreedte = 20;
 
+let mandX = 500; // x-positie van appel
+let mandY = 600;  // y-positie van appel
+let mandBreedte = 150;
+let mandLengte = 10
+
+
 
 /* ********************************************* */
 /* setup() en draw() functies / hoofdprogramma   */
@@ -44,4 +50,17 @@ function draw() {
   noStroke();         // geen lijntje om de vorm heen
   fill(255, 0, 0)     // vulkleur wordt rood
   rect(appelX, appelY, appleBreedte, appleBreedte);
+  
+
+  appelY = appelY + 3;
+
+  rect(mouseX-65,mandY,mandBreedte,mandLengte);
+
+
 }
+
+if (appelY >= mandY) {
+  appelY = 0;
+};
+
+
