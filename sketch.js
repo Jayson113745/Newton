@@ -56,11 +56,16 @@ function draw() {
 
   rect(mouseX-65,mandY,mandBreedte,mandLengte);
 
+  if (
+  appelY + appleBreedte > mandY &&
+  appelX + appleBreedte > mouseX - 65 &&
+  appelX < mouseX + 85
+) {
+  appelY = 0;
+}
 
 }
 
-if (appelY >= mandY) {
-  appelY = 0;
-};
+
 
 
